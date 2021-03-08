@@ -1,8 +1,14 @@
 import React from 'react';
 
-function KeyboardKey(props: {letter: string, onClick:(letter: string)=>()=>void }) {
+function KeyboardKey(props: {
+  small: string,
+  capital: string,
+  isCapital: boolean,
+  appender:(letter: string)=>void
+}) {
+  const currentLetter = props.isCapital ? props.capital : props.small;
   return (
-    <button onClick={props.onClick(props.letter)}>{props.letter}</button>
+    <button onClick={() => {props.appender(currentLetter); console.log(currentLetter)}}>{currentLetter}</button>
   );
 }
 

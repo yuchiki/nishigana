@@ -1,0 +1,4 @@
+.Keyboard {
+    display: flex;
+    flex-direction: column;
+}

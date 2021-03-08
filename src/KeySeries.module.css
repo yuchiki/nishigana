@@ -1,0 +1,6 @@
+.KeySeries {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    float: left;
+}
