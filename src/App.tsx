@@ -13,7 +13,6 @@ function App() {
 
   return (
     <div className="App">
-      <div>altKey for diacritics</div>
       <div>{isDiacritized}</div>
       <div>
         <TextInput
@@ -27,12 +26,18 @@ function App() {
           appender={appender}
         />
       </div>
+      <div>
+        <button
+          onClick={(e)=>navigator.clipboard.writeText(text)}
+        >Copy to Clipboard</button>
+      </div>
       <Keyboard
         isInputOnFocus={isInputOnFocus}
         isDiacritized={isDiacritized}
         isCapital={isCapital}
         appender={appender}
       />
+      <div>altKey for diacritics</div>
       <div>
         <h1>Known issues</h1>
         <ul>

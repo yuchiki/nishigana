@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import classes from './TextInput.module.css';
 import { LetterSelector } from "./LetterInfo";
 
@@ -12,11 +12,17 @@ function TextInput(props: {
   setIsDiacritized: (b: boolean) => void,
   appender: (letter: string) => void,
 }) {
+  const textAreaRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(()=> textAreaRef?.current?.focus());
+
   return (
     <textarea
+      ref={textAreaRef}
       className={classes.textinput}
-      rows={20}
+      rows={10}
       cols={200}
+      spellCheck={false}
       onFocus={e=> props.setIsInputOnFocus(true)}
       onChange={e=> props.setText(e.target.value)}
       onKeyDown={e => {
