@@ -33,6 +33,13 @@ function App() {
         isCapital={isCapital}
         appender={appender}
       />
+      <div>
+        <h1>Known issues</h1>
+        <ul>
+          <li>textarea上でctrlキーが効かない</li>
+          <li>textareaの最後にしか文字が追加できない</li>
+        </ul>
+      </div>
     </div>
   );
 }
