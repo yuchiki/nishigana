@@ -1,10 +1,9 @@
 import React from 'react';
 import classes from './Keyboard.module.css'
 import KeySet from "./KeySet";
+import { VowelLetters, ConsonantLetters } from "./LetterInfo";
 
 function Keyboard(props: {
-  vowelLetters: [string, string][][],
-  consonantLetters: [string, string][][],
   isInputOnFocus: boolean,
   isDiacritized: boolean,
   isCapital:  boolean,
@@ -13,7 +12,7 @@ function Keyboard(props: {
   return (
     <div className={classes.Keyboard}>
       <KeySet
-        letterTuples={props.vowelLetters}
+        letterTuples={VowelLetters}
         isInputOnFocus={props.isInputOnFocus}
         isDiacritized={props.isDiacritized}
         isCapital={props.isCapital}
@@ -21,7 +20,7 @@ function Keyboard(props: {
       />
 
       <KeySet
-        letterTuples={props.consonantLetters}
+        letterTuples={ConsonantLetters}
         isInputOnFocus={props.isInputOnFocus}
         isDiacritized={props.isDiacritized}
         isCapital={props.isCapital}

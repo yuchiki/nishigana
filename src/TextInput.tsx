@@ -1,4 +1,5 @@
 import React from 'react';
+import { LetterSelector } from "./LetterInfo";
 
 function TextInput(props: {
   text: string,
@@ -9,7 +10,6 @@ function TextInput(props: {
   isDiacritized: boolean,
   setIsDiacritized: (b: boolean) => void,
   appender: (letter: string) => void,
-  letterSelector: (key: string, isCapitalized: boolean, isDiacritized: boolean) => string,
 }) {
   return (
     <textarea
@@ -21,12 +21,13 @@ function TextInput(props: {
           if (e.shiftKey) {
             props.setIsCapital(true)
           }
-          if (e.ctrlKey) {
+
+          if (e.altKey) {
             props.setIsDiacritized(true)
           }
 
-          if (e.key.length === 1 && /[a-zA-Z]/.test(e.key)) {
-            const letter = props.letterSelector(e.key, props.isCapital, props.isDiacritized);
+          if (/Key[A-Z]/.test(e.code)) {
+            const letter = LetterSelector(e.code.slice(-1), props.isCapital, props.isDiacritized);
             if (letter !== "") {
               e.preventDefault();
               props.appender(letter);
@@ -38,7 +39,7 @@ function TextInput(props: {
           if (e.key === 'Shift') {
             props.setIsCapital(false);
           }
-          if (e.key === 'Control') {
+          if (e.key === 'Alt') {
             props.setIsDiacritized(false);
           }
         }
