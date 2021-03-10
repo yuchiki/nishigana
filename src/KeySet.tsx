@@ -4,6 +4,8 @@ import KeySeries from "./KeySeries";
 
 function KeySet(props: {
   letterTuples: [string, string][][],
+  isInputOnFocus: boolean,
+  isDiacritized: boolean,
   isCapital:  boolean,
   appender: (letter: string) => void,
 }) {
@@ -13,6 +15,8 @@ function KeySet(props: {
         <KeySeries
           key={letterTuple[0][0]}
           letters={letterTuple}
+          isInputOnFocus={props.isInputOnFocus}
+          isDiactitized={props.isDiacritized}
           isCapital={props.isCapital}
           appender={props.appender}
         />
