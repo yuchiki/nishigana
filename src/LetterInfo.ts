@@ -9,6 +9,7 @@ export const VowelLetters: [string, string][][] = [
 
 export const ConsonantLetters: [string, string][][] = [
   [['k', 'K'], ['ǩ', 'Ǩ']],
+  [['g', 'G'], ['ǧ', 'Ǧ']],
   [['s', 'S'], ['š', 'Š']],
   [['z', 'Z'], ['ž', 'Ž']],
   [['t', 'T'], ['ť', 'Ť']],
