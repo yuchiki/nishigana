@@ -12,9 +12,10 @@ function KeyboardKey(props: {
   const currentLetter = props.isCapital ? props.capital : props.small;
   return (
     <button
-      className={
+      className={`${
         props.isEmphasized ? classes.emphasized :
         props.isDisEmphasized ? classes.disemphasized : ""}
+        ${classes.key}`}
       onClick={() => {props.appender(currentLetter); console.log(currentLetter)}}
     >
         {props.isEmphasized ? <b>{currentLetter}</b> : currentLetter}

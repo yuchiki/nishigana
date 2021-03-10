@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <div>{isDiacritized}</div>
+      <h1>Nišgana Keyboard</h1>
       <div>
         <TextInput
           setText={setText}

@@ -6,6 +6,7 @@
     color: grey;
 }
 
-button {
+.key {
     font-size: larger;
+    padding: 10px;
 }
