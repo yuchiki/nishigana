@@ -5,3 +5,7 @@
 .disemphasized {
     color: grey;
 }
+
+button {
+    font-size: larger;
+}

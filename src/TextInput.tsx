@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from './TextInput.module.css';
 import { LetterSelector } from "./LetterInfo";
 
 function TextInput(props: {
@@ -13,6 +14,7 @@ function TextInput(props: {
 }) {
   return (
     <textarea
+      className={classes.textinput}
       rows={20}
       cols={200}
       onFocus={e=> props.setIsInputOnFocus(true)}
