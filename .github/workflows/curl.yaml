@@ -1,0 +1,12 @@
+name: Wake up, Heroku
+on:
+  schedule:
+    - cron:  '*/20 * * * *'
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+    - name: curl
+      uses: wei/curl@master
+      with:
+        args: https://nishigana.herokuapp.com/?from-github-actions-in-yuchiki-nishigana
