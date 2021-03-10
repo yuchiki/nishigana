@@ -21,7 +21,7 @@ function TextInput(props: {
       ref={textAreaRef}
       className={classes.textinput}
       rows={10}
-      cols={200}
+      cols={100}
       spellCheck={false}
       onFocus={e=> props.setIsInputOnFocus(true)}
       onChange={e=> props.setText(e.target.value)}
