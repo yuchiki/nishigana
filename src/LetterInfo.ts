@@ -4,7 +4,7 @@ export const VowelLetters: [string, string][][] = [
   [['u', 'U'], ['ú', 'Ú']],
   [['e', 'E'], ['é', 'É']],
   [['o', 'O'], ['ó', 'Ó']],
-  [['v', 'V'], ['ů', 'Ů']],
+  [['y', 'Y'], ['ů', 'Ů']],
 ];
 
 export const ConsonantLetters: [string, string][][] = [
@@ -15,7 +15,7 @@ export const ConsonantLetters: [string, string][][] = [
   [['c', 'C'], ['č', 'Č']],
   [['d', 'D'], ['ď', 'Ď']],
   [['n', 'N'], ['ň', 'Ň']],
-  [['h', 'H'], ['ȟ', 'Ȟ']],
+  [['x', 'X'], ['x̌', 'X̌']],
   [['m', 'M'], ['m̌','M̌']],
   [['j', 'J']],
   [['r', 'R'], ['ř', 'Ř']],
